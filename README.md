@@ -1,1 +1,0 @@
-# Angular_Do_It_Georgia
