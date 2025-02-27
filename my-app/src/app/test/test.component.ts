@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
+  Count():void{
+    this.counter++
+  }
+    counter:number = 0;
+
+
+  isDisabled: boolean = true;
 
   fmessage:string="hello"
 }
