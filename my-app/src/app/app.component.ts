@@ -9,6 +9,15 @@ import { TestComponent } from "./test/test.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  message:string = 'hello world from Angular';
+parentMessage:string = 'hello from Parent';
+message:string = '';
+
+
+public recieveMessage(message:string):void{
+  this.message = message;
+}
+
+
+
 
 }

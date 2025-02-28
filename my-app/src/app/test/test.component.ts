@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -7,13 +7,21 @@ import { Component } from '@angular/core';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  Count():void{
+  @Input() childMessage: string = '';
+  @Output() messageEvent: EventEmitter<string> = new EventEmitter<string>();
+
+  public sendMessage(): void {
+    this.messageEvent.emit('hello from child');
+
+  };
+
+  Count(): void {
     this.counter++
   }
-    counter:number = 0;
+  counter: number = 0;
 
 
   isDisabled: boolean = true;
 
-  fmessage:string="hello"
+  fmessage: string = "hello"
 }

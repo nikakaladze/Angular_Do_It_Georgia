@@ -1,3 +1,5 @@
 <router-outlet></router-outlet>
-<app-test></app-test>
-<p>{{message}}</p>
+<app-test [childMessage]="parentMessage"
+(messageEvent)="recieveMessage($event)"
+></app-test>
+<p>childMessage: {{message}}</p>
