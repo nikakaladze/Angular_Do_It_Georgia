@@ -1,0 +1,7 @@
+<h2>User Profile</h2>
+<label for="username">UserName: </label>
+<input id="username" [(ngModel)]="username">
+<p>your username is: {{username}}</p>
+ <button [ngClass]="{'highlight':isActive,'disabled':!isActive}">{{username}}</button>
+ <h2 [ngStyle]="{'color':isRed ?  'green':'red'}">hello world</h2>
+ <button [disabled]="!isActive">Click Me</button>
