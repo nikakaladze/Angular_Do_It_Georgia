@@ -3,5 +3,7 @@
 (messageEvent)="recieveMessage($event)"
 ></app-test>
 <p>childMessage: {{message}}</p>
+<app-child>
+    <p #projectedContent>this going some protected content</p>
+</app-child>
 
-<app-user-profile></app-user-profile>
