@@ -1,10 +1,11 @@
-import { CommonModule, NgClass, NgStyle } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from '../directives/highlight.directive';
 
 @Component({
   selector: 'app-user-profile',
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule,HighlightDirective],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })

@@ -1,11 +1,17 @@
 <h2>User Profile</h2>
 <label for="username">UserName: </label>
-<input id="username" [(ngModel)]="username">
-<p>your username is: {{username}}</p>
- <button [ngClass]="{'highlight':isActive,'disabled':!isActive}">{{username}}</button>
- <h2 [ngStyle]="{'color':isRed ?  'green':'red'}">hello world</h2>
- <button [disabled]="!isActive">Click Me</button>
+<input id="username" [(ngModel)]="username" />
+<p>your username is: {{ username }}</p>
+<button [ngClass]="{ highlight: isActive, disabled: !isActive }">
+  {{ username }}
+</button>
+<h2 [ngStyle]="{ color: isRed ? 'green' : 'red' }">hello world</h2>
+<button [disabled]="!isActive">Click Me</button>
 
-<button [ngClass]="{'container':isActive,'disabeld':!isActive}">hello</button>
+<button [ngClass]="{ container: isActive, disabeld: !isActive }">hello</button>
 
-<h1 [ngStyle]="{'color':isBlue ? 'blue':'red'}">hello Angular</h1>
+<h1 [ngStyle]="{ color: isBlue ? 'blue' : 'red' }">hello Angular</h1>
+<!-- <p [appHighlight]="'blue'">hello from Angular </p> -->
+<p appHighlight  [defaultColor]="'lightgray'" [highlightColor]="'green'">
+  user's Description goes here
+</p>
