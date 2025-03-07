@@ -15,6 +15,27 @@ isActive:boolean = true  ;
 isRed:boolean = true;
 isBlue:boolean = false;
 
+myCars = [
+  {
+    brand:'bmw',
+    year:1995,
+    model:'e-34',
+
+  },
+  {
+    brand: 'porsche',
+    year: 2025,
+    model: 'gt3-rs',
+
+  },
+  {
+    brand: 'mercedes',
+    year: 2025,
+    model: 'maybach',
+
+  }
+];
+
 
 
 
