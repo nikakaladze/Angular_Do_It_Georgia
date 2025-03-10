@@ -1,1 +1,21 @@
-<p appHighlight>here we go</p>
+<p appHighlight [defaultColor]="'green'" [highlightColor]="'blue'">here we go: </p>
+<div *ngIf="isLoggedIn">Hello Users: :)</div>
+<div *ngIf="!isLoggedIn">Please Log In First</div>
+<ul  *ngFor="let player of players" appHighlight>
+  <li>Number: {{player.id}}</li>
+  <li>FirstName: {{player.firstName}}</li>
+  <li>LastName: {{player.lastName}}</li>
+  <li>Position: {{player.position}}</li>
+</ul>
+
+
+<div [ngSwitch]="useRole">
+  <p *ngSwitchCase="'IsAdmin'">Hello is Admin PAge</p>
+  <p *ngSwitchCase="'IsUser'">Hello is Home PAge</p>
+  <p *ngSwitchCase="'IsGuest'">Hello is About PAge</p>
+  <p *ngSwitchCase="'IsSecurity'">Hello is Page is Perhibited For All Users</p>
+</div>
+<div>
+<p *appRepeat="3" appHighlight>Programming With Angular</p>
+
+</div>
